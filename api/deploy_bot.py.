@@ -1,0 +1,11 @@
+rom flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/deploy', methods=['POST'])
+def deploy():
+data = request.json
+return jsonify({"message": "Deploy command received"}), 200
+
+if __name__ == '__main__':
+app.run()
