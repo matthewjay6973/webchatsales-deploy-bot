@@ -1,1 +1,9 @@
-
+{
+"version": 2,
+"builds": [
+{ "src": "api/deploy_bot.py", "use": "@vercel/python" }
+],
+"routes": [
+{ "src": "/deploy", "dest": "api/deploy_bot.py" }
+]
+}
